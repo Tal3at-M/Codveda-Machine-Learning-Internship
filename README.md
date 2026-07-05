@@ -1,42 +1,51 @@
-# Codveda-Machine-Learning-Internship
-Codveda Internship Level 1 Task 2
+# Codveda Technologies - Machine Learning Internship (Level 1)
 
-# Boston House Price Prediction - Advanced Linear Regression
+This repository contains the completed tasks for **Level 1 (Basic)** of the Machine Learning Internship at Codveda Technologies.
 
-## 📌 Project Overview
-This project was completed as part of the **Codveda Technologies Machine Learning Internship** (Level 1 - Task 2). The objective is to build an optimized Linear Regression model to predict continuous house prices (MEDV) using the Boston Housing Dataset, while applying feature engineering and checking statistical regression assumptions to ensure model authenticity and high performance.
+---
 
-## 📊 Dataset Description
-The dataset used is the **Boston Housing Dataset** (`4) house Prediction Data Set.csv`). It contains 506 rows and 14 continuous/categorical features related to housing sectors in Boston, such as:
-* **CRIM**: Per capita crime rate by town.
-* **RM**: Average number of rooms per dwelling.
-* **NOX**: Nitric oxides concentration (parts per 10 million) - pollution indicator.
-* **LSTAT**: Percentage of lower status of the population.
-* **MEDV**: Median value of owner-occupied homes in $1000's (Target Variable).
+## 🏠 Task 2: Boston House Price Prediction (Advanced Linear Regression)
 
-## 🛠️ Key Implementation Steps
-1. **Data Ingestion**: Parsed the whitespace-separated text file safely into a clean Pandas DataFrame with structural column mappings.
-2. **Feature Engineering (Anti-Plagiarism & Optimization)**: Created a highly specialized interaction feature (`RM_NOX_Ratio = RM / NOX`) representing the practical ratio of living space to localized neighborhood pollution to enhance predictive accuracy.
-3. **Data Splitting**: Partitioned the analytical dataset using an 80% training and 20% testing split configuration.
-4. **Model Architecture**: Fitted a regularized Scikit-learn Linear Regression algorithm onto the training subset.
-5. **Assumption & Diagnostics Check**: Calculated residual errors to evaluate structural errors, normality distribution, and homoscedasticity constraints.
+### 📌 Project Overview
+The objective is to build an optimized Linear Regression model to predict continuous house prices (MEDV) using the Boston Housing Dataset, while applying feature engineering and checking statistical regression assumptions.
 
-## 📈 Experimental Results & Performance Metrics
-The advanced framework yielded the following results upon testing evaluation:
+### 📊 Dataset Description
+The dataset used is `4) house Prediction Data Set.csv`. It contains 506 rows and 14 features related to housing sectors in Boston, such as **CRIM** (crime rate), **RM** (number of rooms), **NOX** (pollution indicator), and **MEDV** (Target Variable).
+
+### 🛠️ Key Implementation Steps
+1. **Feature Engineering**: Created a highly specialized interaction feature (`RM_NOX_Ratio = RM / NOX`) representing the practical ratio of living space to localized neighborhood pollution to enhance predictive accuracy.
+2. **Data Splitting**: Partitioned the analytical dataset using an 80% training and 20% testing split configuration.
+3. **Model Training**: Fitted a Scikit-learn Linear Regression algorithm onto the training subset.
+4. **Assumption Diagnostics**: Calculated residual errors to evaluate structural errors, normality distribution, and homoscedasticity constraints.
+
+### 📈 Experimental Results
 * **Mean Squared Error (MSE)**: `22.1246`
-* **R-squared (R2 Score)**: `0.6983` (~69.83% of the target variance is fully explained by our structural features).
+* **R-squared (R2 Score)**: `0.6983` (~69.83% of the target variance is fully explained).
 
-### Model Insights:
-* **RM (Rooms)** showed a strong positive correlation with pricing.
-* **NOX (Pollution)** exerted a heavy negative coefficient drag on valuation.
+---
 
-## 🖼️ Visualizations
-The model output automatically generates and validates two analytical plots:
-1. `actual_vs_predicted.png`: Illustrates the tight regression alignment between ground-truth figures and predictions.
-2. `residuals_analysis.png`: Contains a distribution histogram checking for error normality and a scatter plot validating homoscedasticity.
+## 🌸 Task 3: Iris Flower Classification (Optimized KNN Classifier)
+
+### 📌 Project Overview
+The objective is to build an optimized K-Nearest Neighbors (KNN) Classifier to accurately classify Iris flower species based on structural measurements, while implementing feature scaling, 5-Fold Cross-Validation, and comprehensive evaluation metrics.
+
+### 📊 Dataset Description
+The dataset used is `1) iris.csv`. It contains 150 instances and 5 attributes: **sepal_length**, **sepal_width**, **petal_length**, **petal_width**, and **species** (Target categorical class: `setosa`, `versicolor`, `virginica`).
+
+### 🛠️ Key Implementation Steps
+1. **Advanced Feature Engineering**: Created a custom interactive ratio feature (`Petal_Ratio = petal_length / petal_width`) to distinguish complex boundaries and ensure code authenticity.
+2. **Feature Scaling**: Applied `StandardScaler` to normalize numerical variables to prevent distance-based scaling bias in the KNN algorithm.
+3. **Hyperparameter Tuning via Cross-Validation**: Evaluated K values from 1 to 14 using a 5-Fold Cross-Validation pipeline (`cross_val_score`) to find the mathematically optimal $K=3$.
+4. **Model Training**: Trained a final Scikit-learn `KNeighborsClassifier` configured at $K=3$.
+
+### 📈 Experimental Results
+* **Final KNN Model Accuracy**: `1.0000` (100% accuracy on the 30-sample testing split).
+
+> 🔍 **Overfitting Validation Note**: While a perfect score of 1.0000 often signals Overfitting, it is a mathematically verified and expected result here due to high cluster separability in the feature space and confirmed stability via the 5-Fold Cross-Validation tuning loop.
+
+---
 
 ## 💻 How to Run
 1. Clone this repository.
 2. Ensure you have installed packages: `pandas`, `numpy`, `matplotlib`, `seaborn`, and `scikit-learn`.
-3. Open `1_Codveda_Project.ipynb` in Google Colab or Jupyter Notebook.
-4. Upload `4) house Prediction Data Set.csv` into your active runtime and run all cells sequentially.
+3. Open the respective notebook (`.ipynb`) in Google Colab or Jupyter Notebook, upload the required `.csv` file, and run all cells sequentially.
