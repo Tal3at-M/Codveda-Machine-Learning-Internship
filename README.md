@@ -65,6 +65,29 @@ The dataset utilized is `3) sentiment dataset.csv`. The targeted task focuses on
 
 ---
 
+## 📈 Level 2 - Task 3: Stock Market Segmentation (Unsupervised K-Means Clustering)
+
+### 📌 Project Overview
+The objective is to implement an unsupervised learning pipeline using K-Means Clustering to group publicly traded assets based on mathematical financial risk-return dynamics, uncovering latent market sectors without manual labeling.
+
+### 📊 Dataset Description
+The dataset used is `2) Stock Prices Data Set.csv`, tracking historical pricing across 505 unique stock tickers.
+
+### 🛠️ Key Implementation Steps
+1. **Financial Feature Extraction**: Engineered asset-specific performance metrics by converting raw closing prices into rolling `Daily Returns`. Aggregated metrics per ticker to derive **Mean Return** (Performance) and **Volatility** (Risk via Standard Deviation).
+2. **Feature Standardization**: Scaled the engineered matrices using `StandardScaler` to ensure the distance-based Euclidean calculations in K-Means aren't biased by feature magnitude variances.
+3. **Hyperparameter Optimization**: Applied the **Elbow Method** tracking Within-Cluster Sum of Squares (WCSS) over 1 to 10 cluster ranges to isolate the optimal curvature bend at $K=4$.
+4. **Clustering Architecture**: Initialized and fitted an optimized `KMeans` model with `k-means++` initialization to ensure robust cluster convergence.
+
+### 📈 Clustering Interpretations & Results
+The algorithm segmented the 505 equities into 4 highly distinct economic risk-return profiles:
+* **Cluster 0 (65 Assets)**: *High Risk - High Return Profile* (Aggressive Growth Assets).
+* **Cluster 1 (353 Assets)**: *Low Risk - Stable Return Profile* (Core Defensive/Blue-Chip Assets, e.g., AAPL).
+* **Cluster 2 (81 Assets)**: *Moderate Risk - Stagnant Profile* (High Volatility with near-zero returns).
+* **Cluster 3 (6 Assets)**: *Extreme Risk - Negative Return Profile* (Underperforming/Distressed Assets).
+
+---
+
 ## 💻 How to Run
 1. Clone this repository.
 2. Ensure you have installed packages: `pandas`, `numpy`, `matplotlib`, `seaborn`, and `scikit-learn`.
