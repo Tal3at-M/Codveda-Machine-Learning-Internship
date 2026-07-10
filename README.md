@@ -1,6 +1,6 @@
 # Codveda Technologies - Machine Learning Internship Portfolio
 
-This repository contains the completed milestones for the Machine Learning Internship at Codveda Technologies, structured systematically across multiple evaluation levels.
+This repository contains the completed milestones for the Machine Learning Internship at Codveda Technologies, structured systematically across multiple evaluation levels from foundations to advanced deep learning architectures.
 
 ---
 
@@ -88,7 +88,38 @@ The algorithm segmented the 505 equities into 4 highly distinct economic risk-re
 
 ---
 
+## 🛡️ Level 3 - Task 2: Support Vector Machine (SVM) Decision Boundary Analysis
+
+### 📌 Project Overview
+The objective is to implement a robust classification boundary using Support Vector Machines (SVM) on the Iris Dataset, comparing the mathematical convergence behavior of Linear vs. Radial Basis Function (RBF) non-linear Kernels, and rendering explicit 2D Decision Boundaries.
+
+### 🛠️ Key Implementation Steps
+1. **Binary Target Conversion**: Isolated the overlapping classes (`versicolor` and `virginica`) to form a complex decision boundary, standardizing the feature matrix via `StandardScaler`.
+2. **Model Fitting**: Co-trained a Linear SVM and an RBF SVM using synchronized regularization parameters ($C=1.0$).
+3. **Decision Boundary Grid Generation**: Built a structural 2D mesh-grid mesh to predict and visually project the exact hyper-plane and non-linear margin separations.
+
+### 📈 Experimental Results
+* **Linear Kernel Test Accuracy**: `0.8667`
+* **RBF Kernel Test Accuracy**: `0.9000` (The non-linear hyper-plane accurately parsed the intertwined boundary points, optimizing classification performance).
+
+---
+
+## 🧠 Level 3 - Task 3: Deep Neural Network Text Classifier (TensorFlow & Keras)
+
+### 📌 Project Overview
+The objective is to construct a Deep Feed-Forward Artificial Neural Network (ANN) using TensorFlow/Keras to solve a Multi-Class NLP sentiment classification task. The model incorporates Backpropagation, Dropout Regularization, Softmax probability distribution, and early stopping diagnostics.
+
+### 🛠️ Key Implementation Steps
+1. **ANN Architecture Design**: Developed a 5-layer deep sequential network: Input Layer $\rightarrow$ Dense (64 Neurons, ReLU) $\rightarrow$ Dropout (0.3) $\rightarrow$ Dense (16 Neurons, ReLU) $\rightarrow$ Dropout (0.2) $\rightarrow$ Dense (3 Output Neurons, Softmax).
+2. **Imbalance Mitigation via Loss Calibration**: Computed programmatic balanced class weights (`compute_class_weight`) to penalize minority class classification errors dynamically during backpropagation.
+3. **Diagnostic Plotting**: Tracked accuracy and loss iterations over validation splits to mathematically verify network convergence.
+
+### 📈 Experimental Results
+* **Training and Validation Stability**: Achieved high learning stability with validation accuracy successfully converging at `1.0000` and validation loss stabilizing perfectly at `0.5267` without displaying sudden divergent overfitting curves.
+
+---
+
 ## 💻 How to Run
 1. Clone this repository.
-2. Ensure you have installed packages: `pandas`, `numpy`, `matplotlib`, `seaborn`, and `scikit-learn`.
+2. Ensure you have installed packages: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, and `tensorflow`.
 3. Open the respective notebook (`.ipynb`) in Google Colab or Jupyter Notebook, upload the required `.csv` file, and run all cells sequentially.
